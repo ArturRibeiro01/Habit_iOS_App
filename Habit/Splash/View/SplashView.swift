@@ -7,65 +7,60 @@
 
 import SwiftUI
 
+
+
 struct SplashView: View {
-    
-    @State var state: SplashUIState = .goToSignInScreen
-    
-    var body: some View {
-        switch state {
+  
+  @ObservedObject var viewModel: SplashViewModel
+
+  var body: some View {
+    Group {
+      switch viewModel.uiState {
         case .loading:
-            loadingView()
-           
+          loadingView()
         case .goToSignInScreen:
-            Text("Tela de Login")
+          Text("tela de login")
+        // navegar para proxima tela
         case .goToHomeScreen:
-            Text("Tela Principal")
+          Text("Aqui é a HomePage")
+        // navegar para proxima tela
         case .error(let msg):
-            Text("Erro: \(msg)")
-            loadingView(error: msg)
-        }
-    }
+          loadingView(error: msg)
+      }
+    }.onAppear(perform: viewModel.onAppear)
+  }
+  
 }
 
 extension SplashView {
-    func loadingView(error: String? = nil) -> some View {
-        ZStack {
-                 Image("logoHabits")
-                     .resizable()
-                     .scaledToFit()
-                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                     
-            if let error = error {
-                Text("")
-                    .alert(isPresented: .constant(true)) {
-                        Alert(
-                            title: Text("Habit"),
-                            message: Text(error),
-                            dismissButton: .default(Text("Fechar")){
-                                //  Fazer algo quando o alerta sumir
-                            })
-                    }
-            }
-            
-        }.background(Color.purple).ignoresSafeArea()
+  func loadingView(error: String? = nil) -> some View {
+    ZStack {
+      Image("logoHabits")
+        .resizable()
+        .scaledToFit()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(20)
+        .background(Color.purple)
+        .ignoresSafeArea()
+      
+      if let error = error {
+        Text("")
+          .alert(isPresented: .constant(true)) {
+            Alert(title: Text("Habit"), message: Text(error), dismissButton: .default(Text("Ok")) {
+              // faz algo quando some o alerta
+            })
+          }
+       }
     }
+  }
 }
-
-
-
 
 struct SplashView_Previews: PreviewProvider {
-    static var previews: some View {
-        SplashView(state: .error("teste de erro no servidor"))
-    }
+  static var previews: some View {
+    let viewModel = SplashViewModel()
+    SplashView(viewModel: viewModel)
+  }
 }
-
-
-
-
-
-
-
 
 
 //Use dessa forma quando for usar o mesmo bloco em outros locais do código
