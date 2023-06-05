@@ -12,15 +12,17 @@
 		752245902A2D6C120069EE8B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7522458F2A2D6C120069EE8B /* Preview Assets.xcassets */; };
 		7522459C2A2D6F250069EE8B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7522459B2A2D6F250069EE8B /* SplashView.swift */; };
 		7522459E2A2D71920069EE8B /* SplashUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7522459D2A2D71920069EE8B /* SplashUIState.swift */; };
+		752245A12A2D97200069EE8B /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752245A02A2D97200069EE8B /* SplashViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		752245852A2D6C110069EE8B /* Habit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		752245882A2D6C110069EE8B /* HabitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitApp.swift; sourceTree = "<group>"; };
-		7522458C2A2D6C120069EE8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7522458C2A2D6C120069EE8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Habit/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		7522458F2A2D6C120069EE8B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7522459B2A2D6F250069EE8B /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		7522459D2A2D71920069EE8B /* SplashUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashUIState.swift; sourceTree = "<group>"; };
+		752245A02A2D97200069EE8B /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		752245962A2D6E650069EE8B /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				7522459F2A2D96960069EE8B /* ViewModel */,
 				752245982A2D6EBE0069EE8B /* Model */,
 				752245972A2D6EB20069EE8B /* View */,
 			);
@@ -92,6 +95,14 @@
 				7522459D2A2D71920069EE8B /* SplashUIState.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7522459F2A2D96960069EE8B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				752245A02A2D97200069EE8B /* SplashViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +178,7 @@
 				7522459E2A2D71920069EE8B /* SplashUIState.swift in Sources */,
 				752245892A2D6C110069EE8B /* HabitApp.swift in Sources */,
 				7522459C2A2D6F250069EE8B /* SplashView.swift in Sources */,
+				752245A12A2D97200069EE8B /* SplashViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
