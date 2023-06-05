@@ -40,8 +40,8 @@ extension SplashView {
         .scaledToFit()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(20)
-        .background(Color.purple)
-        .ignoresSafeArea()
+        .background(Color("backgroundColor"))
+        .edgesIgnoringSafeArea(.all)
       
       if let error = error {
         Text("")
