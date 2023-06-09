@@ -18,5 +18,12 @@ class SplashViewModel: ObservableObject{
             self.uiState = .goToSignInScreen
         }
     }
+    
+
 }
 
+extension SplashViewModel {
+    func SignInView() -> some View {
+        return SplashViewRouter.makeSignInView()
+    }
+}

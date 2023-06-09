@@ -9,6 +9,17 @@ import SwiftUI
 
 @main
 struct HabitApp: App {
+    
+    init(){
+        for family in UIFont.familyNames {
+            print(family)
+            for font in UIFont.fontNames(forFamilyName: family){
+                print ("\(font)")
+            }
+        }
+        
+    }
+    
     var body: some Scene {
         WindowGroup {
            SplashView(viewModel: SplashViewModel())

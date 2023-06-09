@@ -13,6 +13,12 @@
 		7522459C2A2D6F250069EE8B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7522459B2A2D6F250069EE8B /* SplashView.swift */; };
 		7522459E2A2D71920069EE8B /* SplashUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7522459D2A2D71920069EE8B /* SplashUIState.swift */; };
 		752245A12A2D97200069EE8B /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752245A02A2D97200069EE8B /* SplashViewModel.swift */; };
+		752245A62A2EA12B0069EE8B /* BreeSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 752245A52A2EA12B0069EE8B /* BreeSerif-Regular.ttf */; };
+		752245A92A2EA1870069EE8B /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 752245A72A2EA1870069EE8B /* Roboto-Light.ttf */; };
+		752245AA2A2EA1870069EE8B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 752245A82A2EA1870069EE8B /* Roboto-Regular.ttf */; };
+		752245B22A32B3970069EE8B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752245B12A32B3970069EE8B /* SignInView.swift */; };
+		752245B42A32B4110069EE8B /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752245B32A32B4110069EE8B /* SignInViewModel.swift */; };
+		752245B62A32C0730069EE8B /* SplashViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752245B52A32C0730069EE8B /* SplashViewRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +29,13 @@
 		7522459B2A2D6F250069EE8B /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		7522459D2A2D71920069EE8B /* SplashUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashUIState.swift; sourceTree = "<group>"; };
 		752245A02A2D97200069EE8B /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		752245A52A2EA12B0069EE8B /* BreeSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BreeSerif-Regular.ttf"; sourceTree = "<group>"; };
+		752245A72A2EA1870069EE8B /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		752245A82A2EA1870069EE8B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		752245AB2A2EA3690069EE8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		752245B12A32B3970069EE8B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		752245B32A32B4110069EE8B /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		752245B52A32C0730069EE8B /* SplashViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +68,9 @@
 		752245872A2D6C110069EE8B /* Habit */ = {
 			isa = PBXGroup;
 			children = (
+				752245AC2A32B0EA0069EE8B /* SignIn */,
+				752245AB2A2EA3690069EE8B /* Info.plist */,
+				752245A22A2EA0A50069EE8B /* Resources */,
 				752245962A2D6E650069EE8B /* Splash */,
 				752245882A2D6C110069EE8B /* HabitApp.swift */,
 				7522458C2A2D6C120069EE8B /* Assets.xcassets */,
@@ -101,8 +117,52 @@
 			isa = PBXGroup;
 			children = (
 				752245A02A2D97200069EE8B /* SplashViewModel.swift */,
+				752245B52A32C0730069EE8B /* SplashViewRouter.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		752245A22A2EA0A50069EE8B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				752245A72A2EA1870069EE8B /* Roboto-Light.ttf */,
+				752245A82A2EA1870069EE8B /* Roboto-Regular.ttf */,
+				752245A52A2EA12B0069EE8B /* BreeSerif-Regular.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		752245AC2A32B0EA0069EE8B /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				752245B02A32B14A0069EE8B /* View */,
+				752245AD2A32B0FA0069EE8B /* ViewModel */,
+				752245AF2A32B1300069EE8B /* Model */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		752245AD2A32B0FA0069EE8B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				752245B32A32B4110069EE8B /* SignInViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		752245AF2A32B1300069EE8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		752245B02A32B14A0069EE8B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				752245B12A32B3970069EE8B /* SignInView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +224,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				752245902A2D6C120069EE8B /* Preview Assets.xcassets in Resources */,
+				752245A62A2EA12B0069EE8B /* BreeSerif-Regular.ttf in Resources */,
+				752245AA2A2EA1870069EE8B /* Roboto-Regular.ttf in Resources */,
+				752245A92A2EA1870069EE8B /* Roboto-Light.ttf in Resources */,
 				7522458D2A2D6C120069EE8B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,8 +240,11 @@
 			files = (
 				7522459E2A2D71920069EE8B /* SplashUIState.swift in Sources */,
 				752245892A2D6C110069EE8B /* HabitApp.swift in Sources */,
+				752245B42A32B4110069EE8B /* SignInViewModel.swift in Sources */,
 				7522459C2A2D6F250069EE8B /* SplashView.swift in Sources */,
 				752245A12A2D97200069EE8B /* SplashViewModel.swift in Sources */,
+				752245B62A32C0730069EE8B /* SplashViewRouter.swift in Sources */,
+				752245B22A32B3970069EE8B /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +376,7 @@
 				DEVELOPMENT_TEAM = PJV896P3GR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Habit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -340,6 +407,7 @@
 				DEVELOPMENT_TEAM = PJV896P3GR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Habit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

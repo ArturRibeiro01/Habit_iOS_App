@@ -4,10 +4,7 @@
 //
 //  Created by Artur Mac on 04/06/23.
 //
-
 import SwiftUI
-
-
 
 struct SplashView: View {
   
@@ -19,7 +16,8 @@ struct SplashView: View {
         case .loading:
           loadingView()
         case .goToSignInScreen:
-          Text("tela de login")
+//          Text("tela de login").font(Font.custom("Roboto-Regular", size: 22))
+          viewModel.SignInView()
         // navegar para proxima tela
         case .goToHomeScreen:
           Text("Aqui é a HomePage")
@@ -42,7 +40,7 @@ extension SplashView {
         .padding(20)
         .background(Color("backgroundColor"))
         .edgesIgnoringSafeArea(.all)
-      
+
       if let error = error {
         Text("")
           .alert(isPresented: .constant(true)) {
