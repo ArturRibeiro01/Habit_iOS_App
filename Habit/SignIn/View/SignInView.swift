@@ -13,28 +13,49 @@ struct SignInView: View {
     
     @State var email = ""
     @State var password = ""
+    @State var navigationHidden = true
     
     @State var action: Int? = 0
     
     var body: some View {
-        VStack(alignment: .center){
-            Image("logoHabits")
-              .resizable()
-              .scaledToFit()
-              .padding(30)
-            
-            Text("Login")
-                .foregroundColor(Color.primary)
-                .font(Font.system(.title).bold())
-                .padding(.bottom, 8)
-            
-            numberField
-            
-            passwordField
-            
-            enterButton
-            
-            registerLink
+        
+        NavigationView{
+            ScrollView(showsIndicators: false) {
+                
+                VStack(alignment: .center , spacing: 20){
+                    Spacer(minLength: 36)
+                    VStack(alignment: .center, spacing: 8){
+                        Image("logoHabits")
+                          .resizable()
+                          .scaledToFit()
+                          .padding(30)
+                        
+                        Text("Login")
+                            .foregroundColor(Color.primary)
+                            .font(Font.system(.title).bold())
+                            .padding(.bottom, 8)
+                        
+                        numberField
+                        passwordField
+                        enterButton
+                        registerLink
+                        
+                        Text("Copyright @yyy")
+                            .foregroundColor(Color.gray)
+                            .font(Font.system(size: 16).bold())
+                    }
+                    
+                }
+                
+            }.frame(maxWidth: .infinity, maxHeight: .infinity)
+             .padding(.horizontal, 6)
+             .background(Color.purple)
+             .navigationBarHidden(navigationHidden)
+             .navigationBarTitle("Login", displayMode: .inline)
+        }.onAppear{
+            self.navigationHidden = true
+        }.onDisappear{
+            self.navigationHidden = false
         }
     }
 }
@@ -83,8 +104,6 @@ extension SignInView {
         }
     }
 }
-
-
 
 
 struct SignInView_Previews: PreviewProvider {
